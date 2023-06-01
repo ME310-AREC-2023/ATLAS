@@ -1,0 +1,11 @@
+{
+    "require": {
+        "influxdb/influxdb-php": "^1.15",
+        "influxdata/influxdb-client-php": "^3.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}

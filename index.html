@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" style="background: #ffffff;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BIOME</title>
+    <link rel="icon" href="assets/img/logoSmol.png" type="image/png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Collapse-card.css">
+    <link rel="stylesheet" href="assets/css/Forum---Thread-listing-forum.css">
+    <link rel="stylesheet" href="assets/css/Forum---Thread-listing.css">
+    <link rel="stylesheet" href="assets/css/gradient-navbar-styles.css">
+    <link rel="stylesheet" href="assets/css/gradient-navbar.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Centered-Links-icons.css">
+    <link rel="stylesheet" href="assets/css/Soft-UI-Aside-Navbar.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switch-toggle-switch.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switch.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switches.css">
+    <link rel="stylesheet" href="assets/css/weather-icons.css">
+    <link rel="stylesheet" href="assets/css/Weather-Widget-sidebar-styles.css">
+    <link rel="stylesheet" href="assets/css/Weather-Widget-sidebar.css">
+</head>
+
+<body style="padding: 0px 0px;background: url(&quot;assets/img/548490-nature-wallpaper.jpg&quot;), rgb(0,0,0);height: 1005px;position: fixed;background-size: auto, auto;">
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <nav id="app-navbar" class="navbar navbar-dark navbar-expand-md fixed-top text-center" style="text-align: center;height: auto;min-height: 66px;max-height: 100px;position: fixed;background: url('assets/img/Navbar.png'), rgba(255,255,255,0.22);backdrop-filter: saturate(200%);">
+        <div class="container-fluid"><img src="assets/img/BIOME%20Logo.svg" width="131" height="42" style="margin: 5px;width: 131px;margin-left: 59px;" />
+            <div id="navcol-1" class="collapse navbar-collapse text-center" style="margin-right: 0px;padding-left: 20px;font-size: 8px;">
+                <ul class="navbar-nav mx-auto ml-auto" style="text-align: left;font-size: 10px;">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" style="font-family: Montserrat, sans-serif;font-size: 20px;padding-left: 25px;text-align: center;">Building Overview</a></li>
+                    <li class="nav-item" style="font-family: Montserrat, sans-serif;font-size: 20px;padding-left: 25px;text-align: center;"><a class="nav-link" href="tenant-feedback.html" style="font-family: Montserrat, sans-serif;font-size: 20px;padding-left: 25px;text-align: center;color: rgb(0,0,0);">Tenant Feedback</a></li>
+                    <li class="nav-item" style="font-family: Montserrat, sans-serif;font-size: 20px;padding-left: 25px;text-align: center;"><a class="nav-link" href="health-index.html" style="font-family: Montserrat, sans-serif;font-size: 20px;padding-left: 25px;text-align: center;color: rgb(0,0,0);">Health Index</a></li>
+                </ul>
+            </div><img src="assets/img/ATLAS%20Logo.svg" width="136.8" height="42" style="margin: 5px;width: 136.8px;margin-right: 59px;" />
+        </div>
+    </nav>
+
+    <aside class="float-start sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl" id="sidenav-main" style="padding-left: 6px;margin: 28px 0px;/*margin-bottom: 0px;*/margin-right: 0px;font-size: 18px;width: 250px;display: flex;align-content: flex-start;background: #ffffffb6;margin-left: 0px;margin-top: 95px;padding-right: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;min-width: 227px;height: 880px;"><strong style="width: 97px;display: flex;padding-left: 9px;padding-top: 10px;">Filter</strong>
+        <ul class="navbar-nav" style="position: relative;">
+            <li class="nav-item" style="font-size: 18px;"><a class="nav-link" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">Combined</span><span class="badge rounded-pill bg-primary urgent-list-count" style="--bs-primary: #ff3333;--bs-primary-rgb: 255,51,51;">42</span><span class="badge rounded-pill bg-primary warning-list-count" style="--bs-primary: #f107;--bs-primary-rgb: 255,193,7;">42</span></a></li>
+        </ul>
+        <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button" style="color: rgb(74,74,74);--bs-primary: #6d6d6d;--bs-primary-rgb: 109,109,109;min-width: 218.75px;text-align: left;background: rgba(13,110,253,0);border-style: none;border-color: rgb(255,255,255);">By Floor</a>
+            <div class="collapse" id="collapse-1">
+                <div id="sidenav-collapse-main" class="collapse navbar-collapse w-auto" style="height: 372px;">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="floor-1.html" style="padding-top: 9px;"><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">Floor 1</span><span class="badge rounded-pill bg-primary urgent-list-count" style="--bs-primary: #ff3333;--bs-primary-rgb: 255,51,51;">42</span><span class="badge rounded-pill bg-primary warning-list-count" style="--bs-primary: #f107;--bs-primary-rgb: 255,193,7;">42</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">Floor 2</span><span class="badge rounded-pill bg-primary" style="--bs-primary: #4ad927;--bs-primary-rgb: 74,217,39;background: rgb(152,136,106);color: rgb(74,217,39);">42</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">Floor 3</span><span class="badge rounded-pill bg-primary" style="--bs-primary: #4ad927;--bs-primary-rgb: 74,217,39;background: rgb(152,136,106);color: rgb(74,217,39);">42</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">Floor 4</span><span class="badge rounded-pill bg-primary" style="--bs-primary: #4ad927;--bs-primary-rgb: 74,217,39;background: rgb(152,136,106);color: rgb(74,217,39);">42</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">Floor 5</span><span class="badge rounded-pill bg-primary" style="--bs-primary: #4ad927;--bs-primary-rgb: 74,217,39;background: rgb(152,136,106);color: rgb(74,217,39);">42</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">Floor 6</span><span class="badge rounded-pill bg-primary" style="--bs-primary: #4ad927;--bs-primary-rgb: 74,217,39;background: rgb(152,136,106);color: rgb(74,217,39);">42</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">Floor 7</span><span class="badge rounded-pill bg-primary" style="--bs-primary: #4ad927;--bs-primary-rgb: 74,217,39;background: rgb(152,136,106);color: rgb(74,217,39);">42</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">Floor 8</span><span class="badge rounded-pill bg-primary" style="--bs-primary: #4ad927;--bs-primary-rgb: 74,217,39;background: rgb(152,136,106);color: rgb(74,217,39);">42</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-2" href="#collapse-2" role="button" style="background: rgba(255,255,255,0);color: rgb(74,74,74);--bs-primary: #6d6d6d;--bs-primary-rgb: 109,109,109;min-width: 218.75px;text-align: left;border-style: none;border-color: rgb(255,255,255);">By Tenant</a>
+            <div class="collapse show" id="collapse-2" style="height: 830px;">
+                <div id="sidenav-collapse-main-1" class="collapse navbar-collapse w-auto">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" style="font-size: 18px;"><a class="nav-link" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">GSK Pharma</span><span class="badge rounded-pill bg-primary" style="--bs-primary: #4ad927;--bs-primary-rgb: 74,217,39;background: rgb(152,136,106);color: rgb(74,217,39);">42</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="floor-1.html" style="padding-top: 9px;"><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">SAP Labs</span><span class="badge rounded-pill bg-primary" style="--bs-primary: #4ad927;--bs-primary-rgb: 74,217,39;background: rgb(152,136,106);color: rgb(74,217,39);">42</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">IMCD</span><span class="badge rounded-pill bg-primary" style="--bs-primary: #4ad927;--bs-primary-rgb: 74,217,39;background: rgb(152,136,106);color: rgb(74,217,39);">42</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">KLIPP Friseur</span><span class="badge rounded-pill bg-primary" style="--bs-primary: #4ad927;--bs-primary-rgb: 74,217,39;background: rgb(152,136,106);color: rgb(74,217,39);">42</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">CEYOND Group</span><span class="badge rounded-pill bg-primary" style="--bs-primary: #4ad927;--bs-primary-rgb: 74,217,39;background: rgb(152,136,106);color: rgb(74,217,39);">42</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">Eggers &amp; Franke</span><span class="badge rounded-pill bg-primary" style="--bs-primary: #4ad927;--bs-primary-rgb: 74,217,39;background: rgb(152,136,106);color: rgb(74,217,39);">42</span></a></li>
+                        <li class="nav-item"><a class="nav-link active" href=""><span class="nav-link-text ms-1" style="font-size: 16px;min-width: 135px;">d.School</span><span class="badge rounded-pill bg-primary urgent-list-count" style="--bs-primary: #ff3333;--bs-primary-rgb: 255,51,51;">42</span><span class="badge rounded-pill bg-primary warning-list-count" style="--bs-primary: #f107;--bs-primary-rgb: 255,193,7;">42</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="shadow mb-3" id="Alerts" style="border-radius: 21px;margin-top: 95px;width: 1057px;max-width: 650px;height: 880px;position: fixed;border: 10.5px solid rgb(255,108,108);background: rgba(255,255,255,0.71);margin-left: 270px;">
+        <div class="container" style="position: fixed;margin: 0;max-height: 860px;overflow: auto;max-width: 632px;width: 100%;">
+            <div class="row" style="margin: 0;width: 100%;">
+                <div class="col-md-12" style="width: 100%;">
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist" style="position: fixed;background: rgb(199, 200, 208);font-family: Montserrat, sans-serif;width: 590px;">
+                            <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="tab" href="#tab-1" style="color: rgb(86,86,86); border-top-left-radius: 10px;border-top-right-radius: 10px;">Urgent Alerts&nbsp;&nbsp;<span class="badge rounded-pill bg-primary urgent-list-count" style="--bs-primary: #ff3333;--bs-primary-rgb: 255,51,51;">42</span></a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-2" style="color: rgb(86,86,86);">Warnings&nbsp;&nbsp;<span class="badge rounded-pill bg-primary warning-list-count" style="--bs-primary: #f107;--bs-primary-rgb: 255,193,7;">42</span></a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-3" style="color: rgb(86,86,86);">Past Alerts&nbsp;&nbsp;</a></li>
+                        </ul>
+                        <div class="tab-content" style="overflow: scroll;overflow-y: scroll;overflow-x: auto;width: 585px;height: 859px;">
+                            <div class="tab-pane active" role="tabpanel" id="tab-1">
+                                <div class="thread-list-head" style="padding-top: 30px;font-family: Montserrat, sans-serif;">
+                                    <ul id="urgentList" class="thread-list" style="overflow: hidden;overflow-y: scroll;">
+                                        <!-- Urgent Alerts will be inserted here -->
+                                    </ul>
+                                    <script src="script.js"></script>                                      
+                                </div>
+                            </div>
+                            <div class="tab-pane" role="tabpanel" id="tab-2">
+                                <div class="thread-list-head" style="padding-top: 30px;font-family: Montserrat, sans-serif;">
+                                    <ul id="warningList" class="thread-list" style="overflow: hidden;overflow-y: scroll;">
+                                        <!-- Warning Alerts will be inserted here -->
+                                    </ul>
+                                </div>
+                            </div>                            
+                            <div class="tab-pane" role="tabpanel" id="tab-3">
+                                <div class="thread-list-head" style="padding-top: 30px;font-family: Montserrat, sans-serif;">
+                                    <ul id="pastAlertsList" class="thread-list" style="overflow: hidden;overflow-y: scroll;">
+                                        <!-- Past Alerts will be inserted here -->
+                                    </ul>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shadow mb-3" id="Alerts-1" style="border-radius: 21px;margin-top: 95px;margin-right: 5px;margin-left: 956px;width: 1102px;max-width: 650px;height: 880px;position: fixed;background: rgba(255,255,255,0.71);border: 10.5px solid #2990a7;">
+        <div class="row text-center justify-content-center align-items-center">
+            <div class="col-xxl-11" style="font-size: 17px;padding-top: 8px;padding-bottom: 15px;border-top-left-radius: 16px;background: #2990a7;border-top-right-radius: 16px;width: 100%;"><div style="display: flex; justify-content: space-between;"><span class="time" style="color: rgb(255,255,255);font-family: Montserrat, sans-serif;"> </span><span class="title" style="color: rgb(255,255,255);font-family: Montserrat, sans-serif;"> </span><span class="title" style="color: rgb(255,255,255);font-family: Montserrat, sans-serif;"><strong> </strong></span></div></div>
+        </div>
+
+        <div>
+            <ul id="parameterDropdown" class="nav nav-tabs" role="tablist" style="position: fixed; background: rgba(255, 255, 255, 0); font-family: Montserrat, sans-serif; width: 628px;">
+                <li class="nav-item d-xxl-flex" role="presentation">
+                  <a class="nav-link active d-xxl-flex justify-content-xxl-center align-items-xxl-center" role="tab" data-bs-toggle="tab" onclick="selectTab('bVOC')" style="color: rgb(86,86,86); border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                    <span class="badge rounded-pill bg-primary badge-BVOC" style="--bs-primary: #ff3333; --bs-primary-rgb: 255,51,51; font-size: 0px; width: 5px; height: 5px; background: rgb(255,51,51); visibility:hidden;">42</span>  bVOC
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link d-xxl-flex justify-content-xxl-center align-items-xxl-center" role="tab" data-bs-toggle="tab" onclick="selectTab('iaq')" style="color: rgb(86,86,86);">
+                    <span class="badge rounded-pill bg-primary badge-ECO2" style="--bs-primary: #ff3333; --bs-primary-rgb: 255,51,51; font-size: 0px; width: 5px; height: 5px; background: rgb(255,51,51); visibility:hidden;">42</span>  IAQ
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link d-xxl-flex justify-content-xxl-center align-items-xxl-center" role="tab" data-bs-toggle="tab" onclick="selectTab('humidity')" style="color: rgb(86,86,86);">
+                    <span class="badge rounded-pill bg-primary badge-RH" style="--bs-primary: #ff3333; --bs-primary-rgb: 255,51,51; font-size: 0px; width: 5px; height: 5px; background: rgb(255,51,51); visibility:hidden;">42</span>  Humidity
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link d-xxl-flex justify-content-xxl-center align-items-xxl-center" role="tab" data-bs-toggle="tab" onclick="selectTab('temp')" style="color: rgb(86,86,86);">
+                    <span class="badge rounded-pill bg-primary badge-Temp" style="--bs-primary: #ff3333; --bs-primary-rgb: 255,51,51; font-size: 0px; width: 5px; height: 5px; background: rgb(255,51,51); visibility:hidden;">42</span>  Temperature
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link d-xxl-flex justify-content-xxl-center align-items-xxl-center" role="tab" data-bs-toggle="tab" onclick="selectTab('eCO2')" style="color: rgb(86,86,86);">
+                    <span class="badge rounded-pill bg-primary badge-ECO2" style="--bs-primary: #ff3333; --bs-primary-rgb: 255,51,51; font-size: 0px; width: 5px; height: 5px; background: rgb(255,51,51); visibility:hidden;">42</span>  eCO2
+                  </a>
+                </li>
+              </ul>              
+            <div class="tab-content" style="overflow: scroll;overflow-y: scroll;overflow-x: auto;width: 585px;height: 15px;"></div>
+        </div>
+
+        <div id="scatterplot"></div>
+        <style>
+            #scatterplot {
+              background-color: #f0f0f000;
+              padding: 20px;
+              user-select: none;
+            }
+            .myCircle:hover {
+                stroke: black;
+                stroke-width: 2;
+            }
+        </style>                 
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/d3-array@3"></script>
+        <script src="https://cdn.jsdelivr.net/npm/d3-time@3"></script>
+        <script src="https://cdn.jsdelivr.net/npm/d3-time-format@4"></script>
+
+        <div class="row text-center justify-content-center align-items-center">
+            <div class="col text-start" style="padding-left: 30px;margin-top: -20px;">
+                <label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;width: 301.4062px;padding: 5px;padding-bottom: 0px;padding-top: 0px;text-align: left;height: 18px;-ms-transform: translateY(-50%);transform: translateY(-35%);font-size: 19px;"><strong>Current Ventilation Capacity</strong></label>
+                <label id="ventilationCapacity" class="form-label" for="co2" style="font-family: Montserrat, sans-serif;font-size: 32px;color: rgb(32, 135, 73);width: 69.1406px;">80%</label>
+                <div class="btn-group" role="group" style="padding: 24px;height: 94px;">
+                    <button id="increaseVentButton" class="btn btn-primary" type="button" style="width: 50px;border-top-left-radius: 16px;border-bottom-left-radius: 16px;height: 32px;background: rgb(49,215,115);border-style: none;">+</button>
+                    <button id="decreaseVentButton" class="btn btn-primary" type="button" style="width: 50px;height: 32px;border-top-right-radius: 16px;border-bottom-right-radius: 16px;background: rgb(255,86,75);border-style: none;">-</button>
+                </div>
+            </div> 
+        </div>
+        <div class="row text-center justify-content-center align-items-center">
+            <div class="col text-start" style="padding-left: 30px;margin-top: -20px;">
+                <label class="form-label" for="temp" style="font-family: Montserrat, sans-serif;width: 301.4062px;padding: 5px;padding-bottom: 0px;padding-top: 0px;text-align: left;height: 18px;-ms-transform: translateY(-50%);transform: translateY(-35%);font-size: 19px;"><strong>Current Set Temperature</strong></label>
+                <label id="setTemp" class="form-label" for="temp" style="font-family: Montserrat, sans-serif;font-size: 32px;color: rgb(32, 135, 73);width: 69.1406px;">23˚C</label>
+                <div class="btn-group" role="group" style="padding: 24px;height: 94px;">
+                    <button id="increaseTempButton" class="btn btn-primary" type="button" style="width: 50px;border-top-left-radius: 16px;border-bottom-left-radius: 16px;height: 32px;background: rgb(49,215,115);border-style: none;">+</button>
+                    <button id="decreaseTempButton" class="btn btn-primary" type="button" style="width: 50px;height: 32px;border-top-right-radius: 16px;border-bottom-right-radius: 16px;background: rgb(255,86,75);border-style: none;">-</button>
+                </div>
+            </div>            
+        </div>
+        <div class="row text-center justify-content-center align-items-center">
+            <div class="col text-start" style="padding-left: 30px;margin-top: -20px;">
+                <label class="form-label" for="rh" style="font-family: Montserrat, sans-serif;width: 301.4062px;padding: 5px;padding-bottom: 0px;padding-top: 0px;text-align: left;height: 18px;-ms-transform: translateY(-50%);transform: translateY(-35%);font-size: 19px;"><strong>Current Set Rel. Humidity</strong></label>
+                <label id="setRH" class="form-label" for="rh" style="font-family: Montserrat, sans-serif;font-size: 32px;color: rgb(32, 135, 73);width: 69.1406px;">50%</label>
+                <div class="btn-group" role="group" style="padding: 24px;height: 94px;">
+                    <button id="increaseRHButton" class="btn btn-primary" type="button" style="width: 50px;border-top-left-radius: 16px;border-bottom-left-radius: 16px;height: 32px;background: rgb(49,215,115);border-style: none;">+</button>
+                    <button id="decreaseRHButton" class="btn btn-primary" type="button" style="width: 50px;height: 32px;border-top-right-radius: 16px;border-bottom-right-radius: 16px;background: rgb(255,86,75);border-style: none;">-</button>
+                </div>
+            </div>            
+        </div>
+        <div class="row text-center justify-content-center align-items-center">
+            <div class="col text-start" style="padding-left: 30px;padding-top: 18px;margin-top: -20px;">
+                <label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;width: 301.4062px;padding: 5px;padding-bottom: 0px;padding-top: 0px;text-align: left;height: 18px;-ms-transform: translateY(-50%);transform: translateY(-35%);font-size: 19px;"><strong>Send maintenance alert?</strong></label><label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;width: 47.4062px;padding: 5px;padding-bottom: 0px;padding-top: 0px;text-align: left;height: 21px;margin-top: 0px;-ms-transform: translateY(-50%);transform: translateY(-45%);font-size: 19px;"><strong>No</strong></label><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;width: 71.4062px;padding: 5px;padding-bottom: 0px;padding-top: 0px;text-align: left;height: 21px;-ms-transform: translateY(-50%);transform: translateY(-45%);padding-right: 0px;padding-left: 12px;font-size: 19px;">Yes</label>
+                <div style="width: 60px;height: 30px;"></div>
+            </div>
+        </div>
+        <div class="text-center"><button class="btn btn-primary btn-sm" id="saveSettings" type="submit" style="display: none; font-family: Montserrat, sans-serif;border-radius: 25.5px;background: rgb(41,144,167);border-style: none;height: 31.375px;width: 125px;font-size: 13px;color: rgb(255,255,255);padding-top: 3.5px;">Update Changes</button>
+        </div>
+
+    </div>
+
+    <div class="container" style="padding: 5px 5px 0px;padding-top: 0px;position: fixed;margin-left: 1648px;margin-top: 95px;margin-bottom: 5px;padding-bottom: 5px;text-align: right;padding-right: 0;padding-left: 0;height: 342px;border-style: none;max-width: 240px;">
+        <div class="col-lg-12 d-lg-flex justify-content-lg-center" style="max-width: 100%;height: 254px;border-style: none;">
+            <div class="card shadow mb-3" style="max-width: 100%;height: 880px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;background: rgba(255,255,255,0);border-style: none;">
+                <div class="mw-85 d-flex align-items-center text-light" data-bs-toggle="collapse" href="#cardMyCollapse" aria-expanded="false" aria-controls="cardMyCollapse" onclick="rotate(this)" style="padding: 5px;background: rgba(29,135,71,0.75);border-top-left-radius: 10px;border-top-right-radius: 10px;width: 240px;">
+                    <h4 class="text-truncate fw-normal m-0" style="padding-left: 10px;font-family: Montserrat, sans-serif;--bs-primary: #30ced6;--bs-primary-rgb: 48,206,214;background: rgba(255,255,255,0);">Region Performance</h4>
+                </div>
+                <div class="card-body text-center" style="background: rgba(22,105,55,0.7);width: 240px;height: 405px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;">
+                    <div class="row text-center justify-content-center align-items-center" style="padding-top: 30px;">
+                        <div class="col text-center d-xxl-flex align-self-center justify-content-xxl-center">
+                            <div class="text-center text-sm-center text-md-center text-lg-center text-xl-center text-xxl-center form-group mb-3" style="background: #ffffff;font-size: 14px;border-radius: 21px;width: 161.5px;height: 115px;"><label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;width: 128.4062px;padding: 5px;padding-bottom: 0px;padding-top: 10px;"><strong>Pending Pre-Set Requests</strong></label><label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;font-size: 32px;color: rgb(22,105,55);">&nbsp;4&nbsp;</label></div>
+                        </div>
+                    </div>
+                    <div class="row text-center justify-content-center align-items-center" style="padding-top: 30px;">
+                        <div class="col text-center d-xxl-flex align-self-center justify-content-xxl-center">
+                            <div class="text-center text-sm-center text-md-center text-lg-center text-xl-center text-xxl-center form-group mb-3" style="background: #ffffff;font-size: 14px;border-radius: 21px;width: 161.5px;height: 115px;"><label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;width: 128.4062px;padding: 5px;padding-bottom: 0px;padding-top: 10px;"><strong>Pending Complaints</strong></label><label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;font-size: 32px;color: rgb(22,105,55);">&nbsp;4&nbsp;</label></div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 30px;">
+                        <div class="col d-xxl-flex align-self-center justify-content-xxl-center">
+                            <div class="text-center text-sm-center text-md-center text-lg-center text-xl-center text-xxl-center form-group mb-3" style="background: #ffffff;font-size: 14px;border-radius: 21px;width: 161.5px;height: 115px;"><label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;width: 100.4062px;padding: 5px;padding-bottom: 0px;padding-top: 10px;"><strong>Energy Saved</strong></label><label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;font-size: 32px;color: rgb(22,105,55);"><strong>6 kJ</strong></label></div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 30px;">
+                        <div class="col d-xxl-flex justify-content-xxl-center">
+                            <div class="text-center text-sm-center text-md-center text-lg-center text-xl-center text-xxl-center form-group mb-3" style="background: #ffffff;font-size: 14px;border-radius: 21px;width: 161.5px;height: 115px;"><label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;width: 130.4062px;padding: 5px;padding-bottom: 0px;padding-top: 10px;"><strong>Average Addressal Time</strong></label><label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;font-size: 32px;color: rgb(22,105,55);"><strong>2 hrs</strong></label></div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 30px;">
+                        <div class="col d-xxl-flex justify-content-xxl-center">
+                            <div class="text-center text-sm-center text-md-center text-lg-center text-xl-center text-xxl-center form-group mb-3" style="background: #ffffff;font-size: 14px;border-radius: 21px;width: 161.5px;height: 115px;"><label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;width: 110.4062px;padding: 5px;padding-bottom: 0px;padding-top: 10px;"><strong>Energy Savings Rank</strong></label><label class="form-label" for="co2" style="font-family: Montserrat, sans-serif;font-size: 32px;color: rgb(22,105,55);"><strong>&nbsp; 3&nbsp;&nbsp;</strong></label></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Collapse-card-animations.js"></script>
+
+</body>
+
+</html>

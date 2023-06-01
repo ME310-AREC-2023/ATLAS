@@ -1,0 +1,121 @@
+.weather-widget-container {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  z-index: 1000;
+  width: 30%;
+}
+
+.loading-container {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  z-index: 1001;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  color: gray;
+}
+
+.ow-row {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2%;
+}
+
+.ow-row:last-child {
+  margin-bottom: 0;
+}
+
+.ow-ico {
+  line-height: 0em;
+  top: calc(50% - 10px);
+}
+
+.ow-widget {
+  background-color: #44b2e2;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 3%;
+}
+
+.ow-widget .pull-left {
+  float: left;
+}
+
+.ow-widget .pull-right {
+  float: right;
+}
+
+.ow-city-name {
+  letter-spacing: 1px;
+  line-height: 1.111em;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.wi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto !important;
+  margin-top: 2px;
+}
+
+.ow-ico-current {
+  font-size: 60px;
+  width: 1.3em;
+}
+
+.ow-temp-current {
+  font-size: 60px;
+  margin: 0 5%;
+}
+
+.ow-temp-current.minimized {
+  font-size: 24px;
+  margin-left: 10px;
+  line-height: 1.111em;
+}
+
+.ow-current-desc {
+  line-height: 1.6em;
+}
+
+.ow-forecast-item {
+  float: left;
+  width: calc(25% - 1px);
+  text-align: center;
+  border-right: 1px solid white;
+}
+
+.ow-forecast-item:last-child {
+  border-right: 0;
+}
+
+.ow-forecast-item .ow-ico-forecast {
+  font-size: 20px;
+  line-height: 0em;
+  position: relative;
+  margin: 6px 0;
+}
+
+.ow-forecast-item .ow-forecast-temp span {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.current-date {
+  font-size: 14px;
+  font-weight: bold;
+  float: left;
+  white-space: nowrap;
+}
+
