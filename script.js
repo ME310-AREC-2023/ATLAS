@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     fetchData();
-    setInterval(fetchData, 5000);  // Fetch new data every 5 seconds
+    setInterval(fetchData, 300000);  // Fetch new data every 5 mins / 300 seconds
 
     // Change ventilation
 

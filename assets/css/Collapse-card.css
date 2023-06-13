@@ -23,6 +23,11 @@
   border-color: var(--color-success);
 }
 
-a {
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(245, 133, 53);
+  border-radius: 50%;
+  margin-right: 5px;
 }
-

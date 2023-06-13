@@ -7,7 +7,7 @@
     <title>BIOME</title>
     <link rel="icon" href="assets/img/logoSmol.png" type="image/png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/montserrat.css">
     <link rel="stylesheet" href="assets/css/Collapse-card.css">
     <link rel="stylesheet" href="assets/css/Forum---Thread-listing-forum.css">
     <link rel="stylesheet" href="assets/css/Forum---Thread-listing.css">
@@ -25,14 +25,14 @@
 </head>
 
 <body style="padding: 0px 0px;background: url(&quot;assets/img/548490-nature-wallpaper.jpg&quot;), rgb(0,0,0);height: 1005px;position: fixed;background-size: auto, auto;">
-    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="scripts/mqtt.min.js"></script>
     <nav id="app-navbar" class="navbar navbar-dark navbar-expand-md fixed-top text-center" style="text-align: center;height: auto;min-height: 66px;max-height: 100px;position: fixed;background: url('assets/img/Navbar.png'), rgba(255,255,255,0.22);backdrop-filter: saturate(200%);">
         <div class="container-fluid"><img src="assets/img/BIOME%20Logo.svg" width="131" height="42" style="margin: 5px;width: 131px;margin-left: 59px;" />
             <div id="navcol-1" class="collapse navbar-collapse text-center" style="margin-right: 0px;padding-left: 20px;font-size: 8px;">
                 <ul class="navbar-nav mx-auto ml-auto" style="text-align: left;font-size: 10px;">
                     <li class="nav-item"><a class="nav-link active" href="index.html" style="font-family: Montserrat, sans-serif;font-size: 20px;padding-left: 25px;text-align: center;">Building Overview</a></li>
                     <li class="nav-item" style="font-family: Montserrat, sans-serif;font-size: 20px;padding-left: 25px;text-align: center;"><a class="nav-link" href="tenant-feedback.html" style="font-family: Montserrat, sans-serif;font-size: 20px;padding-left: 25px;text-align: center;color: rgb(0,0,0);">Tenant Feedback</a></li>
-                    <li class="nav-item" style="font-family: Montserrat, sans-serif;font-size: 20px;padding-left: 25px;text-align: center;"><a class="nav-link" href="health-index.html" style="font-family: Montserrat, sans-serif;font-size: 20px;padding-left: 25px;text-align: center;color: rgb(0,0,0);">Health Index</a></li>
+                    <!-- <li class="nav-item" style="font-family: Montserrat, sans-serif;font-size: 20px;padding-left: 25px;text-align: center;"><a class="nav-link" href="health-index.html" style="font-family: Montserrat, sans-serif;font-size: 20px;padding-left: 25px;text-align: center;color: rgb(0,0,0);">Health Index</a></li> -->
                 </ul>
             </div><img src="assets/img/ATLAS%20Logo.svg" width="136.8" height="42" style="margin: 5px;width: 136.8px;margin-right: 59px;" />
         </div>
@@ -163,10 +163,10 @@
                 stroke-width: 2;
             }
         </style>                 
-        <script src="https://d3js.org/d3.v7.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/d3-array@3"></script>
-        <script src="https://cdn.jsdelivr.net/npm/d3-time@3"></script>
-        <script src="https://cdn.jsdelivr.net/npm/d3-time-format@4"></script>
+        <script src="scripts/d3.v7.min.js"></script>
+        <script src="scripts/d3-array@3.min.js"></script>
+        <script src="scripts/d3-time@3.min.js"></script>
+        <script src="scripts/d3-time-format@4.min.js"></script>
 
         <div class="row text-center justify-content-center align-items-center">
             <div class="col text-start" style="padding-left: 30px;margin-top: -20px;">
